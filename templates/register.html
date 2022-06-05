@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+ {% block content %}
+<div class="col-sm-4 m-auto">
+<h2 class="text-center bg-info">Register Here</h2>
+</div>
+
+
+<div class="container">
+  <div class="jumbotron">
+     
+
+    <form action="" method="POST">
+      {% csrf_token %} 
+      {{form.as_p}}
+     
+      <button type="submit" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-ok"></span>Register</button>
+      
+    </form>
+    <br>
+<button class="btn btn-info btn-lg"><a href="{% url 'login' %}">Login</a></button>
+  </div>
+</div>
+{% endblock content %}
